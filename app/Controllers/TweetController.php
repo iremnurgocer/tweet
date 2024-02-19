@@ -2,14 +2,14 @@
 require_once __DIR__ . '/../Models/Tweet.php';
 
 class TweetController {
-    private $tweetModel;
+    private $tweetModel = [];
 
     public function __construct() {
         $this->tweetModel = new Tweet();
     }
 
     public function tweetList() {
-        $tweet = $this->tweetModel;
+        $tweet=$this->tweetModel->getAllTweet();
         require_once __DIR__ . '/../Viewvs/tweet/index.php';
     }
 }

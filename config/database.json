@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "kullanici1",
+      "password": "sifre123"
+    },
+    {
+      "id": 2,
+      "username": "kullanici2",
+      "password": "sifre456"
+    }
+  ]
+,
+  "tweets": [
+    {
+      "id": 1,
+      "userId": 1,
+      "content": "Bu bir örnek tweet!"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "content": "Başka bir örnek tweet."
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "content": "Merhaba, bu benim ilk tweetim!"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "content": "Bugün hava çok güzel."
+    }
+  ]
+}
