@@ -1,17 +1,38 @@
 <?php
 
 class Tweet {
-    private $tweet = [];
+    private $tweets = [];
+
     public function __construct() {
-        $this->loadTweet();
+        $this->loadTweets();
     }
 
-
-    public function loadTweet() {
+    public function loadTweets() {
         $json = file_get_contents(__DIR__ . '/../../config/database.json');
-        $this->tweet = json_decode($json, true)["tweets"];
+        $this->tweets = json_decode($json, true)["tweets"];
     }
-    public function getAllTweet() {
-        return $this->tweet;
+
+    public function getAllTweets() {
+        return $this->tweets;
+    }
+
+    public function searchTweets($query) {
+        $results = [];
+        foreach ($this->tweets as $tweet) {
+            if ($this->containsQuery($tweet, $query)) {
+                $results[] = $tweet;
+            }
+        }
+        return $results;
+    }
+
+    private function containsQuery($tweet, $query) {
+        $query = strtolower($query);
+        if (strpos(strtolower($tweet['content']), $query) !== false ||
+            strpos(strtolower($tweet['id']), $query) !== false ||
+            strpos(strtolower($tweet['userId']), $query) !== false) {
+            return true;
+        }
+        return false;
     }
 }

@@ -9,7 +9,11 @@ class TweetController {
     }
 
     public function tweetList() {
-        $tweet=$this->tweetModel->getAllTweet();
-        require_once __DIR__ . '/../Viewvs/tweet/index.php';
+        $tweets = $this->tweetModel->getAllTweets();
+        $query = isset($_GET['query']) ? $_GET['query'] : null;
+        if ($query) {
+            $tweets = $this->tweetModel->searchTweets($query);
+        }
+        require_once __DIR__ . '/../Views/tweet/index.php';
     }
 }

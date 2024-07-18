@@ -1,37 +1,51 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "kullanici1",
-      "password": "sifre123"
-    },
-    {
-      "id": 2,
-      "username": "kullanici2",
-      "password": "sifre456"
-    }
-  ]
-,
-  "tweets": [
-    {
-      "id": 1,
-      "userId": 1,
-      "content": "Bu bir örnek tweet!"
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "content": "Başka bir örnek tweet."
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "content": "Merhaba, bu benim ilk tweetim!"
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "content": "Bugün hava çok güzel."
-    }
-  ]
+    "users": [
+        {
+            "id": 1,
+            "username": "kullanici1",
+            "password": "sifre123"
+        },
+        {
+            "id": 2,
+            "username": "kullanici2",
+            "password": "sifre456"
+        },
+        {
+            "id": 3,
+            "username": "iremnur.gocer",
+            "password": "$2y$10$Vbz1\/onT8yUrgtUvxOqGHemNd8A8SNnKCisf8Ou9GeNDFrQByBZGW"
+        },
+        {
+            "id": 4,
+            "username": "deneme",
+            "password": "$2y$10$fOVe2OvP\/9ZSPn\/jXgxNY.oHDLGi2xERb.nu28H.tZAbpX4uHDBL."
+        },
+        {
+            "id": 5,
+            "username": "deneme2",
+            "password": "$2y$10$eE.CyB\/Xm7Ygh6F9x5t5u.yxHZhubfIA.V6c43DQD3wjqSmAVeRc."
+        }
+    ],
+    "tweets": [
+        {
+            "id": 1,
+            "userId": 1,
+            "content": "Bu bir \u00f6rnek tweet!"
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "content": "Ba\u015fka bir \u00f6rnek tweet."
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "content": "Merhaba, bu benim ilk tweetim!"
+        },
+        {
+            "id": 4,
+            "userId": 2,
+            "content": "Bug\u00fcn hava \u00e7ok g\u00fczel."
+        }
+    ]
 }
